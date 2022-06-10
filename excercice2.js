@@ -10,13 +10,9 @@ function calculateTotalPrice(prices , discountPoucent) {
         if(prices[i]>max){
             max = prices[i];
             sommePrice = sommePrice + prices[i];
-        }
+        }  
     }
-
-
-
-    priceTotal =(sommePrice-max) + (max - ((max * discountPoucent) / 100));
-
-    return round(priceTotal);
+    sommePrice =(sommePrice-max) + (max - ((max * discountPoucent) / 100));
+    return sommePrice;
 
 }
